@@ -1,6 +1,6 @@
 import { ImageResponse } from '@vercel/og';
 
-export const config = { runtime: 'edge' };
+
 
 // Ticket unico de Excursions Punta Cana (ES/EN/FR/DE/IT/PT).
 // Mismos parametros que el ticket anterior: nombre, excursion, fecha, hora, hotel,
@@ -19,7 +19,7 @@ const money = (n) => '$' + (Math.round(n * 100) / 100).toFixed(2) + ' USD';
 const num = (v) => { const n = parseFloat(String(v || '0').replace(',', '.')); return isNaN(n) ? 0 : n; };
 const clip = (s, n) => (s || '').toString().slice(0, n);
 
-export default async function handler(req) {
+export async function GET(req) {
   const p = new URL(req.url).searchParams;
   const langRaw = (p.get('lang') || 'es').toLowerCase().slice(0, 2);
   const t = T[langRaw] || T.es;

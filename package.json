@@ -1,8 +1,12 @@
 {
-    "name": "excursions-qr-card",
-        "version": "1.0.0",
-        "private": true,
-        "dependencies": {
-          "@vercel/og": "^0.6.3"
-    }
+  "name": "excursions-qr-card",
+  "version": "1.0.0",
+  "private": true,
+  "dependencies": {
+    "@vercel/og": "^0.6.3"
+  },
+  "type": "module",
+  "engines": {
+    "node": "20.x"
+  }
 }
