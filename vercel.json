@@ -1,8 +1,10 @@
 {
   "version": 2,
   "functions": {
-    "api/card.js": {
-      "maxDuration": 10
-    }
-  }
+    "api/card.js": { "maxDuration": 10 },
+    "api/ticket.js": { "maxDuration": 10 }
+  },
+  "rewrites": [
+    { "source": "/ticket.png", "destination": "/api/ticket" }
+  ]
 }
