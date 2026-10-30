@@ -1,0 +1,1 @@
+export const h = (type, props, ...children) => { const p = { ...(props || {}) }; if (children.length === 1) p.children = children[0]; else if (children.length > 1) p.children = children; return { type, props: p }; };
